@@ -841,8 +841,9 @@ void main(void)
 	return;
 
 #endif
+*/
 
-#if IS_ENABLED(CONFIG_RESET_BUTTON)
+//#if IS_ENABLED(CONFIG_RESET_BUTTON)
 
 	if (!gpio_is_ready_dt(&button)) {
 		printk("Error: button device %s is not ready\n",
@@ -877,7 +878,6 @@ void main(void)
 		// just a signal when the pair is reset
 		blink();
 	}
-#endif
-*/
+//#endif
 	start_scan();
 }
